@@ -8,6 +8,7 @@ Python application receives websocket stream of JSON arrays and sends individual
 
 ![image](https://raw.githubusercontent.com/tspannhw/FLiPN-Py-Stocks/main/finnhubpystocks.png)
 
+
 ### Raw Data
 ````
 
@@ -75,3 +76,7 @@ key:[20221230191756_a560a594-7c12-42e7-a76d-6650a48533e0], properties:[], conten
 
 * https://finnhub.io/docs/api/authentication
 * https://finnhub.io/docs/api/websocket-trades
+* https://finnhub.io/
+* https://github.com/Finnhub-Stock-API/finnhub-python
+* https://medium.com/@augustin.goudet/introduction-to-finnhub-97c2117dd9a9
+* https://medium.com/@tspann/lets-check-our-stocks-from-finnhub-and-do-some-real-time-analytics-1b7963008e19
