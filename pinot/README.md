@@ -1,11 +1,29 @@
+#### Access Docker Container
+
+````
+
+docker exec -it pinot-controller /bin/bash
+
+````
+
+#### Delete Table and Delete Schema
+
+````
+
+curl -X DELETE "http://localhost:9000/tables/thermal?type=realtime" -H "accept: application/json"
+
+curl -X DELETE "http://localhost:9000/schemas/thermal" -H "accept: application/json"
+
+````
+
 #### Build a Schema From JSON Data
 
 ````
 
 docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
   -timeColumnName ts \
-  -metrics ""\
-  -dimensions "" \
+  -metrics "volume,price"\
+  -dimensions "symbol" \
   -pinotSchemaName=stocks \
   -jsonFile=/data/stocks.json \
   -outputDir=/config
