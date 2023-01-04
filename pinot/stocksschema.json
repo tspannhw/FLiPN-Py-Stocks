@@ -1,0 +1,28 @@
+{
+  "schemaName" : "stocks",
+  "dimensionFieldSpecs" : [ {
+    "name" : "symbol",
+    "dataType" : "STRING"
+  }, {
+    "name" : "currentts",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "volume",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "price",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "tradeconditions",
+    "dataType" : "STRING"
+  }, {
+    "name" : "uuid",
+    "dataType" : "STRING"
+  } ],
+  "dateTimeFieldSpecs" : [ {
+    "name" : "ts",
+    "dataType" : "DOUBLE",
+    "format" : "1:DAYS:EPOCH",
+    "granularity" : "1:DAYS"
+  } ]
+}
