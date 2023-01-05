@@ -10,9 +10,9 @@ docker exec -it pinot-controller /bin/bash
 
 ````
 
-curl -X DELETE "http://localhost:9000/tables/thermal?type=realtime" -H "accept: application/json"
+curl -X DELETE "http://localhost:9000/tables/stocks?type=realtime" -H "accept: application/json"
 
-curl -X DELETE "http://localhost:9000/schemas/thermal" -H "accept: application/json"
+curl -X DELETE "http://localhost:9000/schemas/stocks" -H "accept: application/json"
 
 ````
 
@@ -38,6 +38,15 @@ docker exec -it pinot-controller bin/pinot-admin.sh AddSchema   \
   -schemaFile /config/stocksschema.json \
   -exec
   
+````
+
+#### Add Table via local Linux
+
+````
+./access.sh
+
+bin/pinot-admin.sh AddTable -tableConfigFile /config/stockstable.json -schemaFile /config/stocksschema.json -exec
+
 ````
 
 #### Add Table Via Swagger UI / Curl
